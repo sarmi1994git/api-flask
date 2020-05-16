@@ -1,0 +1,13 @@
+Comandos docker para python_flask
+docker build -t python-flask:latest .
+
+docker commit container_name  python-flask:latest
+
+docker save -o python_flask.tar python_flask:latest
+
+docker build -t api/python:1.0 .
+
+---------crear contenedor-----------
+docker run -p 5000:5000 --name HelloWorld api/python:1.0
+
+docker pull python:3.7
